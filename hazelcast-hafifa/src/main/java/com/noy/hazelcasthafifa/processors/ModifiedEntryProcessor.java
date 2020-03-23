@@ -1,4 +1,4 @@
-package com.noy.processors;
+package com.noy.hazelcasthafifa.processors;
 
 import java.util.Map;
 
