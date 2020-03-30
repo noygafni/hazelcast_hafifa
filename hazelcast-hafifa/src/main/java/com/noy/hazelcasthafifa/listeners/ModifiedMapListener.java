@@ -18,7 +18,7 @@ public class ModifiedMapListener implements EntryListener<Long, String>, EntryLo
                 
     private Logger logger = LoggerFactory.getLogger(ModifiedMapListener.class);
     private final HazelcastInstance hazelcastInstance = Hazelcast.getHazelcastInstanceByName("hazelcast-instance");
-
+    
     @Override
     public void entryAdded( EntryEvent<Long, String> event ) {
         logger.info( "Entry Added:" + event );

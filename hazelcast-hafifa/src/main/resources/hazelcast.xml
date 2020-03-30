@@ -11,5 +11,7 @@
             <entry-listener include-value="false" local="false">com.noy.hazelcasthafifa.listeners.ModifiedMapListener</entry-listener>
         </entry-listeners>
     </map>
-    <executor-service name="test-exec"></executor-service>
+    <executor-service name="test-exec">
+        <pool-size>1000</pool-size>
+    </executor-service>
 </hazelcast>

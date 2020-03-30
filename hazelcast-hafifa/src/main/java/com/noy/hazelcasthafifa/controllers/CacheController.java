@@ -19,12 +19,12 @@ public class CacheController {
 
     @GetMapping("/all")
     public Map<Long, String> getAll() {
-        return hazelcastInstance.getMap("test-cache");
+        return this.hazelcastInstance.getMap("test-cache");
     }
 
     @GetMapping("/fill")
     public String fillCache() {
-        IMap<Long, String> cache = hazelcastInstance.getMap("test-cache");
+        IMap<Long, String> cache = this.hazelcastInstance.getMap("test-cache");
         for(long i=0; i<1000; i++) {
             cache.put(i, Long.toString(i));
         }
